@@ -10,13 +10,28 @@ test.describe('', () => {
     lunchAppPage = new LunchAppPage(page);
   });
   test.beforeEach(async () => {
-    await lunchAppPage.goto();
+    await lunchAppPage.gotoMainPage();
     await lunchAppPage.initiateLogin();
+
   });
 
-  test('Administrator login', async () => {
-    const adminLabel = await page.textContent('.v-subheader.theme--dark');
-    expect(adminLabel).toMatch('Admin 5');
+
+
+  test('Test to check if adding new supplier functionality is working', async () => {
+    lunchAppPage.gotoDishEditing();
+    await page.hover('button:has-text("buildclose")');
+    await page.click('button:has-text("add")');
+    console.log(lunchAppPage.generateRandomString());
+    await page.fill('[aria-label="Tiekėjo Pavadinimas"]', "random");
+    await page.fill('[aria-label="Spalva"]', 'Red');
+    await page.fill('[aria-label="Kaina"]', "")
+    await page.waitForNavigation();
+    await page.waitForNavigation();
+    await page.waitForNavigation();
+    await page.waitForNavigation();
+    await page.waitForNavigation();
+    await page.waitForNavigation();
+    await page.waitForNavigation();
   });
-  
+
 });
