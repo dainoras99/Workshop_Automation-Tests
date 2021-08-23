@@ -1,0 +1,23 @@
+{
+  "name": "workshop_automation-tests",
+  "version": "1.0.0",
+  "description": "* Automation tests\r ## Team members\r * Akvilė Višniauskaitė\r * Dainoras Žiukas\r * Marta Devėnienė\r * Karolis Pranas\r * Viktorija Bartaseviciene\r * Vytautas Ramanauskas\r ## Team logo\r ![image](img.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dainoras99/Workshop_Automation-Tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dainoras99/Workshop_Automation-Tests/issues"
+  },
+  "homepage": "https://github.com/dainoras99/Workshop_Automation-Tests#readme",
+  "dependencies": {
+    "@playwright/test": "^1.14.0"
+  }
+}
